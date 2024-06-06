@@ -37,7 +37,7 @@ The pipeline can be used by calling the class ```DataPipeline()``` and adding th
 
 ## Dataset
 
-The dataset used as a practical example of the pipeline was obtained from Kaggle, named "<a href="(https://www.kaggle.com/datasets/varshitanalluri/crop-recommendation-dataset)">Crop Recommendation Dataset</a>". This dataset contains the following variables:
+The dataset used as a practical example of the pipeline was obtained from Kaggle, named "<a href="https://www.kaggle.com/datasets/varshitanalluri/crop-recommendation-dataset">Crop Recommendation Dataset</a>". This dataset contains the following variables:
 
 - Nitrogen: ratio of nitrogen in the soil.
 - Phosphorus: ratio of Phosphorus content in the soil.
@@ -66,14 +66,47 @@ In total, there are 2200 cases in this dataset.
 | pH_Value | 2200.0 | 6.4694 | 0.7739 | 3.5047 | 5.9716 | 6.4250 | 6.9236 | 9.9350 |
 | Rainfall | 2200.0 | 103.4636 | 54.9583 | 20.2112 | 64.5516 | 94.8676 | 124.2675 | 298.5601 |
 
-- VIF were calculated
+- Correlation matrix was calculated.
+
+![](https://github.com/romaniegaa/Portfolio/blob/main/images/correlation_matrix.png)
+
+- VIFs were calculated.
 
 | Variable | VIF |
 |---|---|
-| Nitrogen | 1.097026 |
-| Phosphorus | 2.630465 |
-| Potassium | 2.797118 |
-| Temperature | 1.111104 |
-| Humidity | 1.368986 |
-| pH_Value | 1.055803 |
-| Rainfall | 1.037426 |
+| Nitrogen | 1.0970 |
+| Phosphorus | 2.6304 |
+| Potassium | 2.7971 |
+| Temperature | 1.1111 |
+| Humidity | 1.3689 |
+| pH_Value | 1.0558 |
+| Rainfall | 1.0374 |
+
+- IQR was calculated and outliers were deleted (432 outliers).
+
+- Skewness was calculated for each variable.
+
+| Variable | Skewness |
+|---|---|
+| Nitrogen | 0.5097 |
+| Phosphorus | 1.0108 |
+| Potassium | 2.3752 |
+| Temperature | 0.1849 |
+| Humidity | -1.0917 |
+| pH_Value | 0.2839 |
+| Rainfall | 0.9658 |
+
+- The medians of skewness per transformation were calculated
+- 
+| Transformation | Skewness |
+|---|---|
+| Original | 0.5097 |
+| Log | -7.7993 |
+| Sqrt | -0.0723 |
+| YeoJohnson | -0.0337 |
+| Quantile | 0.0077 |
+
+- The smallest median skewness is for "Quantile Transformation" with a skewness value of 0.0077.
+- The data was transformed by ```method="quantile"``` at the method ```run_pipeline()```, it can be found <a href="https://github.com/romaniegaa/data_etl/blob/main/quantile_transformed_data.csv">here</a>.
+
+**For a complete exploratory data analysis and machine learning applicaiton of this dataset, visit the following repository:** <a href="https://github.com/romaniegaa/crop-recommendation">Crop Recommendation EDA + Prediction Algorithm</a>
