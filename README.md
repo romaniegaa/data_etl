@@ -37,7 +37,6 @@ The pipeline can be used by calling the class ```DataPipeline()``` and adding th
 
 The dataset used as a practical example of the pipeline was obtained from Kaggle, named "<a href="(https://www.kaggle.com/datasets/varshitanalluri/crop-recommendation-dataset)">Crop Recommendation Dataset</a>". This dataset contains the following variables:
 
-<br>
 - Nitrogen: ratio of nitrogen in the soil.
 - Phosphorus: ratio of Phosphorus content in the soil.
 - Potassium: ratio of Potassium content in the soil.
