@@ -4,8 +4,6 @@
 
 ETL (Extract-Transform-Load) pipelines are automated processes used to move and transform data from various sources into a centralized data warehouse or database for analysis and reporting. These pipelines include the following steps:
 
-<br>
-
 1. **Extract:** Data is collected from the source, such as: databases, APIs or flat files. This stage focuses on retrieving raw data and ensuring it is available for processing.
 2. **Transform:** The extracted data is cleaned, normalized and transformed into a suitable format for analysis.
 3. **Load:** The transformed data is then loaded into a data warehouse or database.
@@ -19,8 +17,6 @@ ETL pipelines are crucial for consolidating data from multiple sources, improvin
 <h2 align="center">Pipeline</h2>
 
 The pipeline can be used by calling the class ```DataPipeline()``` and adding the filepath. Afterwards, the ```run_pipeline(transformation=False, method="none")``` method can be called to start the pipeline. By default, no transformation will be done. Here are the processes that the pipeline does in order:
-
-<br>
 
 - Load the data from a ".csv" file.
 - Check nulls and delete rows with nulls.
