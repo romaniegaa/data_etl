@@ -33,7 +33,9 @@ The pipeline can be used by calling the class ```DataPipeline()``` and adding th
 
 ![](https://github.com/romaniegaa/Portfolio/blob/main/images/etldiagrama2.png)
 
-<h2 align="center">Dataset</h2>
+<h2 align="center">Practical expample</h2>
+
+## Dataset
 
 The dataset used as a practical example of the pipeline was obtained from Kaggle, named "<a href="(https://www.kaggle.com/datasets/varshitanalluri/crop-recommendation-dataset)">Crop Recommendation Dataset</a>". This dataset contains the following variables:
 
