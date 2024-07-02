@@ -33,7 +33,7 @@ The pipeline can be used by calling the class ```DataPipeline()``` and adding th
 
 ![](https://github.com/romaniegaa/Portfolio/blob/main/images/etldiagrama2.png)
 
-<h2 align="center">Practical expample</h2>
+<h2 align="center">Practical example</h2>
 
 ## Dataset
 
@@ -97,7 +97,7 @@ In total, there are 2200 cases in this dataset.
 | Rainfall | 0.9658 |
 
 - The medians of skewness per transformation were calculated
-- 
+
 | Transformation | Skewness |
 |---|---|
 | Original | 0.5097 |
